@@ -51,31 +51,12 @@ pip install dbt-core dbt-databricks # (for Databricks)
 pip install dbt-core dbt-snowflake # (for Snowflake)
 pip install dbt-core dbt-postgres # (for PostgreSQL)
 
-# Freeze dependencies (to make venv reproducible)
-pip freeze > requirements.txt
-```
-Alternatively, edit existing requirements.txt (for a previously used venv) to contain required dependencies ( dbt-core, dbt-postgres) and run;
-```PowerShell
-pip install -r requirements.txt
-```
+# Make venv reproducible
+pip freeze > requirements.txt # creates, displays (or overwrites) a requirements.txt file by writing out all the packages currently installed in your environment, with their exact versions.
 
-> **pip freeze > requirements.txt** displays list of installed packages and save the list into a file called requirements.txt
+# Install dependencies from requirements.txt (to reproduce an existing venv)
+pip install -r requirements.txt # tells pip to install all the Python packages listed inside a file named requirements.txt in one go.
 
-> **Later (for reuse)**
-Anyone cloning this Git repo just needs to do:
-```bash
-# Create virtual environment
-python3 -m venv venv
-
-#Activate it
-venv\Scripts\activate (for Windows) or source venv/bin/activate (for Mac/Linux)
-
-# Install dependencies from requirements.txt
-pip install -r requirements.txt
-```
-> That recreates the same dbt environment exactly.
-
-```bash
 # Verify installed adapters
 pip freeze
 
