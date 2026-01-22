@@ -93,7 +93,7 @@ dbt init # (or "dbt init dbt_project_name" to initialize a specific dbt project 
 - **host**: dbc-71c78b23-9eaa.cloud.databricks.com # (for databricks at "Compute-Serverless Starter Warehouse-Connection details-Server hostname) or `localhost` for postgres
 - **http_path**: /sql/1.0/warehouses/8e5d3729930bb8f2 # (for databricks at "Compute-Serverless Starter Warehouse-Connection details-HTTP path)
 - **Desired access token option**: XXXXXXXXX # (for databricks at "Settings-Developer-Access tokens-Manage-Generate new token) # (won't appear on CLI screen; just paste and press enter)
-
+- **Desired unity catalog option**: use Unity Catalog
 
 
 
