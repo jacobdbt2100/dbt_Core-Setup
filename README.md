@@ -21,12 +21,12 @@
 
 ```PowerShell
 # Create a folder for your project
-mkdir dbt_project_name
+mkdir dbt_project_folder
 
 # Change directory to created folder
-cd dbt_project_name
+cd dbt_project_folder
 
-mkdir dbt_project_name && cd dbt_project_name # (Alternatively, create folder and change directory to the new folder)
+mkdir dbt_project_folder && cd dbt_project_folder # (Alternatively, create folder and change directory to the new folder)
 
 # Create virtual environment
 python3 -m venv venv
