@@ -25,6 +25,7 @@ mkdir dbt_project_name
 
 # Change directory to created folder
 cd dbt_project_name
+
 mkdir dbt_project_name && cd dbt_project_name # (Alternatively, create folder and change directory to the new folder)
 
 # Create virtual environment
