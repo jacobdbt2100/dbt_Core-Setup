@@ -85,7 +85,7 @@ Plugins:
 dbt init # (or "dbt init dbt_project_name" to initialize a specific dbt project out of many in the same environment)
 ```
 
-dbt will ask for:
+**dbt will ask for:**
 
 - **project name**: `my_dbt_project`
 - **host**: `localhost`
