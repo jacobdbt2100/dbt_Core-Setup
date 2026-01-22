@@ -75,7 +75,7 @@ Plugins:
 ```
 
 ## 2. Connect dbt Environment to Data Source
-### 2.1 Create a Database/Catalog and user in Adapter Platform (e.g., Databricks, Snowflake, PostgreSQL, etc.)
+### 2.1 Create a Database/Catalog and user in Data Source Platform (e.g., Databricks, Snowflake, PostgreSQL, etc.)
 
 
 
