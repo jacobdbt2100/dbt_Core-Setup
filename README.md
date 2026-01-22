@@ -25,20 +25,16 @@ mkdir dbt_project_name
 
 # Change directory to created folder
 cd dbt_project_name
-
-# Alternatively, create folder and change directory to the new folder
-mkdir dbt_project_name && cd dbt_project_name
+mkdir dbt_project_name && cd dbt_project_name # (Alternatively, create folder and change directory to the new folder)
 
 # Create virtual environment
 python3 -m venv venv_name
 
-# Activate virtual environment ( with Windows); notice the prefix "venv" after activation
-venv/Scripts/activate
-
-# Activate virtual environment ( with Mac/Linux)
-source venv/bin/activate
+# Activate virtual environment
+venv/Scripts/activate # ( with Windows); notice the prefix "venv" after activation
+source venv/bin/activate # ( with Mac/Linux)
 ```
-**Fix Execution Error in PowerShell for Windows:**
+**Fix Execution Error (if exist) in PowerShell for Windows:**
 
 ```PowerShell
 If `Get-ExecutionPolicy` returns `Restricted`
@@ -47,7 +43,7 @@ Run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
 Reverse command after venv activation: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined`
 ```
 
-### 1.3 Install dbt adapter (e.g, Databricks, Snowflake, PostgreSQL, etc.)
+### 1.3 Install dbt adapter (e.g., Databricks, Snowflake, PostgreSQL, etc.)
 
 ```PowerShell
 # Install both dbt and dbt adapter
@@ -59,7 +55,7 @@ pip install dbt-core dbt-postgres # (for PostgreSQL)
 pip freeze > requirements.txt
 ```
 Alternatively, edit existing requirements.txt (for a previously used venv) to contain required dependencies ( dbt-core, dbt-postgres) and run;
-```bash
+```PowerShell
 pip install -r requirements.txt
 ```
 
