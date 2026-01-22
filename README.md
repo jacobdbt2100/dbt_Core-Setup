@@ -100,3 +100,48 @@ dbt init # (or "dbt init dbt_project_name" to initialize a specific dbt project 
 - **Profile**: `dbt_project_name`
 
 `dbt init dbt_project_name` skips the first question: “Enter a name for your project”
+
+### 2.2 Configure dbt profile
+
+Your **profiles.yml** is located here:
+
+**Windows**:
+> C:\Users\<YourUser>\.dbt\profiles.yml
+
+**Example configuration**:
+
+```yml
+my_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: dbt_user
+      password: dbt_password
+      port: 5432
+      dbname: analytics
+      schema: dbt_schema
+      threads: 4
+```
+
+### 2.3 Test the connection
+
+```bash
+# Switch to project directory
+cd my_dbt_project
+# test connection
+dbt debug
+```
+Alternatively, use this to test the specified project directory;
+```bash
+# Switch to project directory
+cd my_dbt_project
+# test connection
+dbt debug --profile my_dbt_project
+```
+
+If successful, you’ll see:
+```css
+All checks passed!
+```
