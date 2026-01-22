@@ -43,7 +43,7 @@ Run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
 Reverse command after venv activation: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined`
 ```
 
-### 1.3 Install dbt adapter (e.g., Databricks, Snowflake, PostgreSQL, etc.)
+### 1.3 Install dbt core and adapter (e.g., Databricks, Snowflake, PostgreSQL, etc.)
 
 ```PowerShell
 # Install both dbt and dbt adapter
