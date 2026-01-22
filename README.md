@@ -74,41 +74,11 @@ Plugins:
   - databricks: 1.6.11 # for databricks adapter
 ```
 
-## 2. Connect dbt Environment to Data Source
-### 2.1 Create a Database/Catalog and user in Data Source Platform (e.g., Databricks, Snowflake, PostgreSQL, etc.)
+## 2. Connect dbt Project to Data Source
 
+### 2.1 Initialize a dbt project
 
-
-
-Log in to PostgreSQL (via **pgAdmin** or **psql**) and run:
-
-```sql
-CREATE DATABASE analytics;
-CREATE USER dbt_user WITH PASSWORD 'dbt_password';
-GRANT ALL PRIVILEGES ON DATABASE analytics TO dbt_user;
-```
-Then create a sample **schema** and **table**:
-
-```sql
-CREATE SCHEMA raw;
-
-CREATE TABLE raw.customers (
-    customer_id SERIAL PRIMARY KEY,
-    name TEXT,
-    gender TEXT,
-    annual_income NUMERIC
-);
-
-INSERT INTO raw.customers (name, gender, annual_income) VALUES
-('Alice', 'Female', 55000),
-('Bob', 'Male', 72000),
-('Clara', 'Female', 48000),
-('David', 'Male', 88000);
-```
-
-### 2.2 Initialize a dbt project
-
-Create a `Database/Catalog` and `Schema` in Data Source Platform (e.g., Databricks, Snowflake, PostgreSQL, etc.)
+- Create a `Database/Catalog` and `Schema` in Data Source Platform (e.g., Databricks, Snowflake, PostgreSQL, etc.)
 
 ```PowerShell
 # Initialize
