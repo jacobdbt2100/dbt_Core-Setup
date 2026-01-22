@@ -80,9 +80,6 @@ Plugins:
 
 
 
-
-
-
 Log in to PostgreSQL (via **pgAdmin** or **psql**) and run:
 
 ```sql
@@ -111,7 +108,9 @@ INSERT INTO raw.customers (name, gender, annual_income) VALUES
 
 ### 2.2 Initialize a dbt project
 
-```bash
+Create a `Database/Catalog` and `Schema` in Data Source Platform (e.g., Databricks, Snowflake, PostgreSQL, etc.)
+
+```PowerShell
 # Initialize
 dbt init # (or "dbt init dbt_project_name" to initialize a specific dbt project out of many in the same environment)
 ```
