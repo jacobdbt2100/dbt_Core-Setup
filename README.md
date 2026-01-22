@@ -13,6 +13,7 @@
 | **Git**                                     | `git --version`                                                                       |
 | **VS Code** (or your preferred IDE)         | `code --version`                                                                      |
 
+**Doc Reference:**
 - [Connect to adapters](https://docs.getdbt.com/docs/connect-adapters)
 - [Trusted adapters](https://docs.getdbt.com/docs/trusted-adapters)
 
