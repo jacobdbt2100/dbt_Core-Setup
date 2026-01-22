@@ -21,27 +21,27 @@
 
 ```PowerShell
 # Create a folder for your project
-mkdir dbt_postgres_project
+mkdir dbt_project_name
 
 # Change directory to created folder
-cd dbt_postgres_project
+cd dbt_project_name
 
 # Alternatively, create folder and change directory to the new folder
-mkdir dbt_postgres_project && cd dbt_postgres_project
+mkdir dbt_project_name && cd dbt_project_name
 
 # Create virtual environment
-python3 -m venv venv
+python3 -m venv venv_name
 
-# Activate it (Windows); notice the prefix "venv" after activation
+# Activate virtual environment ( with Windows); notice the prefix "venv" after activation
 venv/Scripts/activate
 
-# (Mac/Linux)
+# Activate virtual environment ( with Mac/Linux)
 source venv/bin/activate
 ```
 **Fix Execution Error in PowerShell for Windows:**
 
-```bash
-If `Get-ExecutionPolicy` is `Restricted`
+```PowerShell
+If `Get-ExecutionPolicy` returns `Restricted`
 Run `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force`
 
 Reverse command after venv activation: `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Undefined`
