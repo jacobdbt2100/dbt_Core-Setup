@@ -190,10 +190,10 @@ sources:
 version: 2
 
 models:
-  - name: customers_view
+  - name: customers_view             # must match the actual model file name without the .sql extension
     description: "View of customers with key attributes and income info"
     columns:
-      - name: customer_id # must match the model file name
+      - name: customer_id            # must match the model file name
         description: "Unique ID for each customer"
       - name: annual_income
         description: "Customer's reported annual income"
@@ -202,7 +202,7 @@ models:
       - name: last_name
         description: "Customer last name"
     config:
-      materialized: view       # Can also be 'table', 'incremental', etc.
+      materialized: view             # Can also be 'table', 'incremental', etc.
       alias: transformed_customers   # Optional: physical table/view name in the DB
 ```
 
