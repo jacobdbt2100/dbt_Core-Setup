@@ -164,7 +164,7 @@ WHERE total_amt > 50000
 
 ### 3.2 Define the source
 
-Create file **models/source.yml**:
+`File` **models/source.yml**:
 
 ```yml
 version: 2
@@ -189,7 +189,7 @@ sources:
 
 
 
-# File: models/models.yml
+`File:` models/models.yml
 
 version: 2
 
