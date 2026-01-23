@@ -222,11 +222,14 @@ where order_quantity > 1
 
 
 
-### 3.5 Add tests (optional but recommended)
+### 3.5 Define tests
 
-> **Where Tests Live:**
+There are two types of test:
 
-**(a) Inside schema.yml** (generic tests)
+- Generic
+- Singular (or Custom SQL)
+
+**1. Inside schema.yml** (generic tests)
 
 ✅ This is the most common and recommended way.
 
@@ -262,7 +265,7 @@ Here, dbt will automatically generate and run tests for:
 
 These are **generic tests** (built-in).
 
-**(b) Inside the /tests folder** (singular / custom SQL tests)
+**2. Inside the /tests folder** (singular / custom SQL tests)
 
 This is for custom SQL tests you create manually.
 
@@ -284,7 +287,7 @@ select *
 from {{ ref('customers') }}
 where email not like '%@%.%'
 ```
-**(c) As a standalone test macro**
+### 3.6 Define a standalone test macro
 
 If you want reusable logic (e.g., check pattern validity across multiple tables), you can write a custom test macro in `/macros/tests/`.
 
@@ -309,7 +312,7 @@ columns:
 
 
 
-### 3.6 Run and test the model
+### 3.7 Run and test the model
 
 ```bash
 dbt run
