@@ -106,9 +106,8 @@ dbt init # or "dbt init dbt_project_name" (to initialize a specific dbt project 
 - **Adapter**: `postgres` # for postgres
 - **Profile**: `dbt_project_name`
 
-Your **profiles.yml** file (editable) is located here:
+Your **profiles.yml** file (editable) on **Windows** is located here:
 
-**Windows**:
 `> C:\Users\<YourUser>\.dbt\profiles.yml`
 
 **Example configuration**:
