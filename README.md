@@ -224,23 +224,6 @@ where order_quantity > 1
 
 ### 3.5 Add tests (optional but recommended)
 
-In **schema.yml**, add:
-```yml
-models:
-  - name: customers_view
-    columns:
-      - name: customer_id
-        data_tests:
-          - not_null
-          - unique
-```
-
-Then run:
-```bash
-dbt test
-```
-`dbt tests` help **validate data quality** — like `missing values`, `duplicates`, or `mismatched relationships between tables`.
-
 > **Where Tests Live:**
 
 **(a) Inside schema.yml** (generic tests)
@@ -353,6 +336,28 @@ Check in PostgreSQL:
 SELECT * FROM dbt_schema.customers_view;
 ```
 
+In **schema.yml**, add:
+```yml
+models:
+  - name: customers_view
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
+```
+
+
+
+
+TEST MODELS
+
+Run:
+
+```bash
+dbt test
+```
+`dbt tests` help **validate data quality** — like `missing values`, `duplicates`, or `mismatched relationships between tables`.
 
 
 
