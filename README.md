@@ -216,7 +216,9 @@ where order_quantity > 1
 
 ### 3.5 Run the model(s)
 
-
+- Run all
+- Node selection
+- Upstream/Downstream...?
 
 
 
