@@ -170,14 +170,17 @@ Create **models/schema.yml**:
 version: 2
 
 sources:
-  - name: sales_data      # This is the source name you'll use in dbt; choose any descriptive name
-    database: analytics_db  # Optional: the database where the table lives; otherwise, dbt points to the default database
-    schema: raw            # Schema in the database
+  - name: sales_data          # This is the source name you'll use in dbt; choose any descriptive name
+    description: "Raw sales data from the company's transactional system"
+    database: analytics_db    # Optional: the database where the table lives; otherwise, dbt points to the default database
+    schema: raw               # Schema in the database
     tables:
-      - name: orders       # The name you'll refer to in dbt
-        identifier: orders_2026  # Optional: Actual table name in the database
-
-
+      - name: orders                  # The name you'll refer to in dbt
+        identifier: orders_2026       # Optional: Actual table name in the database
+        description: "Contains all orders placed by customers in 2026"
+      - name: customers
+        identifier: customers_info
+        description: "Customer master data table"
 
 
 
