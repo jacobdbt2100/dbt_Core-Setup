@@ -229,7 +229,7 @@ where order_quantity > 1
 - `Generic (Built-in) tests:` pre-defined dbt tests applied via YAML.
 - `Singular (Custom SQL) tests:` custom SQL queries that return rows if a condition fails.
 
-**1. Generic (or Built-in) test**
+**1. Generic (Built-in) tests**
 
 `Directory` **models/source.yml:**
 
@@ -280,7 +280,7 @@ models:
 
 
 
-**2. Singular (or Custom SQL) test**
+**2. Singular (Custom SQL) tests**
 
 `Directory` **tests/model.yml:**
 
