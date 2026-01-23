@@ -170,7 +170,7 @@ version: 2
 
 sources:
   - name: sales_data          # This is the source name you'll use in dbt; choose any descriptive name
-    description: "Raw sales data from the company's transactional system"
+    description: "Raw sales data from the company's transactional system" # Optional
     database: analytics_db    # Optional: the database where the table lives; otherwise, dbt points to the default database
     schema: raw               # Schema in the database
     tables:
@@ -184,14 +184,14 @@ sources:
 
 ### 3.3 Define the model(s)
 
-`Directory` **models/models.yml:**
+`Directory` **models/model.yml:**
 
 ```yml
 version: 2
 
 models:
   - name: customers_view
-    description: "View of customers with key identifiers and income info"
+    description: "View of customers with key attributes and income info"
     columns:
       - name: customer_id # must match the model file name
         description: "Unique ID for each customer"
