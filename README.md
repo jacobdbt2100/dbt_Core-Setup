@@ -282,22 +282,10 @@ models:
 
 **2. Singular (Custom SQL) tests**
 
-`Directory` **tests/model.yml:**
-
-This is for custom SQL tests you create manually.
-
-```pgsql
-dbt_project/
-├── models/
-│   ├── staging/
-│   └── marts/
-├── tests/
-│   └── customers_email_valid.sql
-```
-Content of `customers_email_valid.sql`:
+`Directory` **tests/customers_email_valid.sql:**
 
 ```sql
--- Fail if any invalid emails exist
+-- Fails if any invalid emails exist
 select *
 from {{ ref('customers') }}
 where email not like '%@%.%'
