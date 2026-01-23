@@ -191,9 +191,9 @@ sources:
 
 `Directory` **models/models.yml:**
 
+```yml
 version: 2
 
-```yml
 models:
   - name: customers_view
     description: "View of customers with key identifiers and income info"
