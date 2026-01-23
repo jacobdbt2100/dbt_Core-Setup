@@ -308,7 +308,7 @@ where email not like '%@%.%'
 
 If you want reusable logic (e.g., check pattern validity across multiple tables), you can write a custom test macro in `/macros/tests/`.
 
-Example macros/tests/test_email_pattern.sql:
+Example macros/tests/email_pattern_test.sql:
 
 ```sql
 {% test email_pattern(model, column_name) %}
