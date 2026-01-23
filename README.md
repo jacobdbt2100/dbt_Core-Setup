@@ -52,6 +52,9 @@ pip install dbt-core dbt-databricks # (for Databricks)
 pip install dbt-core dbt-snowflake # (for Snowflake)
 pip install dbt-core dbt-postgres # (for PostgreSQL)
 
+# Verify dbt installation
+dbt --version
+
 # Create requirements.txt to make venv reproducible
 pip freeze > requirements.txt # creates (or overwrites) a requirements.txt file by writing out all the packages currently installed in your environment, with their exact versions.
 
@@ -60,9 +63,6 @@ pip install -r requirements.txt # tells pip to install all the Python packages l
 
 # Verify installed adapters
 pip freeze # displays installed dependencies in requirements.txt
-
-# Verify dbt installation
-dbt --version
 ```
 Output example for `dbt --version`:
 
