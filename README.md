@@ -164,7 +164,7 @@ WHERE total_amt > 50000
 
 ### 3.2 Define the source
 
-Create **models/schema.yml**:
+Create file **models/source.yml**:
 
 ```yml
 version: 2
@@ -189,23 +189,28 @@ sources:
 
 
 
+# File: models/models.yml
 
+version: 2
 
-
-EDIT LATER (under Sources config in schema.yml)
 ```yml
 models:
   - name: customers_view
-    description: --add description here
+    description: "View of customers with key identifiers and income info"
     columns:
-      - name: customer_id
-        data_tests: --(this test is inside schema.yml; other options are- inside the "/tests" folder, as a standalone test macro in "macros/tests/"
-          -  not_null
-          -  unique
+      - name: customer_id # must match the model file name
+        description: "Unique ID for each customer"
       - name: annual_income
-        data_tests:
-          - not_null 
+        description: "Customer's reported annual income"
+      - name: first_name
+        description: "Customer first name"
+      - name: last_name
+        description: "Customer last name"
     config:
-      materialized: view --can be overridden or simply configured in the model(.sql) file
-      alias: --transformed_customers --optional; to change the model name in the transformed schema
+      materialized: view       # Can also be 'table', 'incremental', etc.
+      alias: transformed_customers   # Optional: physical table/view name in the DB
 ```
+
+
+
+
