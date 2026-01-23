@@ -237,16 +237,16 @@ models:
     columns:
       - name: customer_id
         data_tests:
-          - not_null          # Ensures no null values in customer_id
-          - unique            # Ensures customer_id is unique
-          - relationships:    # Ensures customer_id exists in orders.customer_id
+          - not_null        # Ensures no null values in customer_id
+          - unique          # Ensures customer_id is unique
+          - relationships:  # Ensures customer_id exists in orders.customer_id
               to: ref('orders')
               field: customer_id
 
       - name: customer_status
         data_tests:
           - accepted_values:
-              values:         # Only allows these statuses # Can also be written horizontally; ['active', 'inactive', 'prospect']
+              values:       # Only allows these statuses # Can also be written horizontally; ['active', 'inactive', 'prospect']
                 - active
                 - inactive
                 - prospect
