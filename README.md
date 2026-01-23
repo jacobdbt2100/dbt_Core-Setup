@@ -306,9 +306,9 @@ where email not like '%@%.%'
 
 ### 3.6 Define a standalone test macro
 
-If you want reusable logic (e.g., check pattern validity across multiple tables), you can write a custom test macro in `/macros/tests/`.
+To create reusable logic (e.g., check pattern validity across multiple tables), write a custom test macro.
 
-Example macros/tests/email_pattern_test.sql:
+`Directory` **macros/tests/email_pattern_test.sql:**
 
 ```sql
 {% test email_pattern(model, column_name) %}
