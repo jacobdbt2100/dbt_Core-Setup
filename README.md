@@ -109,7 +109,7 @@ dbt init # or "dbt init dbt_project_name" (to initialize a specific dbt project 
 Your **profiles.yml** file (editable) is located here:
 
 **Windows**:
-> C:\Users\<YourUser>\.dbt\profiles.yml
+`> C:\Users\<YourUser>\.dbt\profiles.yml`
 
 **Example configuration**:
 
