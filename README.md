@@ -229,7 +229,13 @@ There are two types of test:
 - Generic (or built-in)
 - Singular (or Custom SQL)
 
-**1. Inside schema.yml** (generic tests)
+**1. Generic (or Built-in) test**
+
+`Directory` **models/source.yml:**
+
+
+
+`Directory` **models/model.yml:**
 
 ```yml
 models:
@@ -257,7 +263,9 @@ models:
 
 
 
-**2. Inside the /tests folder** (singular / custom SQL tests)
+**2. Singular (or Custom SQL) test**
+
+`Directory` **tests/model.yml:**
 
 This is for custom SQL tests you create manually.
 
