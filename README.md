@@ -146,7 +146,7 @@ All checks passed!
 ## 3. Working with dbt Models
 ### 3.1 Create a model file
 
-In **models/**, create **customers_view.sql**:
+Create **models/customers_view.sql**:
 
 ```sql
 {{ config(materialized='view') }}
@@ -154,12 +154,12 @@ In **models/**, create **customers_view.sql**:
     -- model-level config has the highest priority
 
 SELECT
-    customer_id,
-    name,
-    gender,
-    annual_income
-FROM {{ source('raw', 'customers') }} --analytics.raw.customers (i.e., database.schema.table)
-WHERE annual_income > 50000
+    order_id,
+    item,
+    quantity,
+    total_amt
+FROM {{ source('sales_data', 'orders') }} --analytics_db.raw.orders (i.e., database.schema.table)
+WHERE total_amt > 50000
 ```
 
 ### 3.2 Define the source
