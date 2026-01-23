@@ -312,7 +312,7 @@ To create reusable logic (e.g., check pattern validity across multiple tables), 
 
 `Directory` **macros/tests/email_pattern_test.sql:**
 
-```jinja
+```sql
 {% test email_pattern(model, column_name) %}
     select *
     from {{ model }}
