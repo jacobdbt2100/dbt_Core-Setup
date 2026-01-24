@@ -378,9 +378,9 @@ dbt test --select source:sales_data.customers
 
 ## 4. Version Control with Git
 
-- Git Initialize
+### 4.1 Git Initialize
 
-From the root of your dbt project folder, that is;
+**From the root of your dbt project folder, that is;**
 
 `Directory` **dbt_project_name/**
 
