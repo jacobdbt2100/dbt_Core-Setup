@@ -381,6 +381,16 @@ dbt test --select source:sales_data.customers
 - Environment Setup
 - Git Fundamentals
 - Git Initialize
+
+From the root of your dbt project folder, that is;
+
+`Directory` **dbt_project_name/**
+
+```PowerShell
+# Initialize git
+git init
+```
+
 - Git Insiders
 - Git Add and Git Commit
 - Git Log
