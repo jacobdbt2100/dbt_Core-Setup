@@ -216,12 +216,6 @@ where order_quantity > 1
 
 ### 3.5 Run the model(s)
 
-- Run all
-- Node selection
-- Upstream/Downstream...?
-
-
-
 ```PowerShell
 # Run all models
 dbt run
@@ -229,19 +223,22 @@ dbt run
 # Run a specific model
 dbt run --select model_name
 
-# Run multiple selected models
-dbt run -m model1 model2 model3 ...
+# Run multiple models
+dbt run --select model1 model2 model3
 
-# Run multiple selected models
-dbt run --select model1 model2 model3 ...
+# Run a model and its upstream dependencies
+dbt run --select +model_name
+
+# Run a model and its downstream dependents
+dbt run --select model_name+
+
+# Run both upstream and downstream
+dbt run --select +model_name+
 ```
 
-`-m`(or `--models`) is the older, common shortcut.
-
-
-
-
-
+**Note:**
+- `--select` repalced `-m` and `--models` which are legacy aliases
+- `Node selection` is a dbt feature that lets you run specific models (and their upstream/downstream dependencies) using selectors like `model`, `+model`, or `model+`
 
 ### 3.6 Define tests
 
