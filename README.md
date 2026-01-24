@@ -331,7 +331,7 @@ columns:
 
 ### 3.8 Test the source(s) and model(s)
 
-`dbt tests` **validates data (checks data quality)** — like `missing values`, `duplicates`, `accepted values`, or `mismatched relationships between tables`.
+`dbt tests` **validates data (checks data quality)** - like `missing values`, `duplicates`, `accepted values`, or `mismatched relationships between tables`.
 
 ```PowerShell
 # Run all tests (models + sources)
