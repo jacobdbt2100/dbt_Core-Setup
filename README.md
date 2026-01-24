@@ -334,34 +334,32 @@ columns:
 `dbt tests` **validates data (checks data quality)** — like `missing values`, `duplicates`, `accepted values`, or `mismatched relationships between tables`.
 
 ```PowerShell
-
-# =========================
-# DBT TEST (Tests execution)
-# =========================
-
 # Run all tests (models + sources)
 dbt test
+```
 
+**dbt tests (Models only)**
+
+```PowerShell
 # Run tests for a specific model only
-dbt test --select customers_view
+dbt test --select model
 
-# Run tests for multiple models
+# Run tests for multiple specific models
 dbt test --select model1 model2 model3
 
 # Run tests for a model and its upstream dependencies
-dbt test --select +customers_view
+dbt test --select +model
 
 # Run tests for a model and its downstream dependents
-dbt test --select customers_view+
+dbt test --select model+
 
-# Run tests for both upstream and downstream
-dbt test --select +customers_view+
+# Run tests for a model, its upstream, and its downstream
+dbt test --select +model+
+```
 
+**dbt tests (Sources only)**
 
-# =========================
-# DBT TEST (Sources only)
-# =========================
-
+```PowerShell
 # Run all tests for all sources
 dbt test --select source:*
 
@@ -375,30 +373,6 @@ dbt test --select source:source1 source:source2 ...
 dbt test --select source:sales_data.customers
 ```
 
-
-
-
-
-
-
-
-> **How to Run Tests:**
-
-| **Goal**                                               | **Command**                                                       |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| All tests in project                                   | `dbt test`                                                        |
-| All tests for `customers` model                        | `dbt test --select customers`                                     |
-| All tests for `orders` model                           | `dbt test --select orders`                                        |
-| Tests for a specific column (`customer_id`)            | `dbt test --select customers.customer_id`                         |
-| Only `not_null` tests for `customers`                  | `dbt test --select customers -s test_type:not_null`               |
-| Only `unique` tests for `customers`                    | `dbt test --select customers -s test_type:unique`                 |
-| Only `not_null` tests for `orders`                     | `dbt test --select orders -s test_type:not_null`                  |
-| Only `unique` tests for `orders`                       | `dbt test --select orders -s test_type:unique`                    |
-| Specific SQL test file (e.g., `invalid_email.sql`)     | `dbt test --select invalid_email`                                 |
-| Run tests for both models together                     | `dbt test --select customers orders`                              |
-| Run only `not_null` and `unique` tests for both models | `dbt test --select customers orders -s test_type:not_null,unique` |
-
-
 **Note:**
 - `Node selection` applies to `dbt test`, similar to `dbt run`
 
@@ -407,6 +381,9 @@ dbt test --select source:sales_data.customers
 
 - gitignore
 - ...
+
+
+
 
 
 ## 5. Advanced dbt Concepts
