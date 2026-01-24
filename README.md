@@ -378,6 +378,9 @@ dbt test --select source:sales_data.customers
 
 ## 4. Version Control with Git
 
+`Git:` A version control system that tracks changes in files.
+`GitHub:` A cloud platform for hosting and collaborating on Git repositories.
+
 ### 4.1 Git Initialize
 
 **From the root of your dbt project folder, that is;**
