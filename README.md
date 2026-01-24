@@ -420,9 +420,9 @@ git commit file1.txt file2.py -m "Message"   # Commit only specific files, leavi
 ### 4.4 Git Log
 
 
-### Gitignore & Gitkeep
+### 4.5 Gitignore & Gitkeep
 
-### Git Branches and Merges
+### 4.6 Git Branches and Merges
 
 ```PowerShell
 git branch                   # List all local branches and show the current branch
@@ -434,31 +434,42 @@ git switch new_branch        # Alternative to checkout (Git 2.23+)
 
 git checkout -b new_branch   # Create and switch to a new branch
 git switch -c new_branch     # Alternative to checkout (Git 2.23+)
+```
 
+**Rename current branch locally**
+
+```PowerShell
 git branch -m main           # Rename current branch to "main"
 git branch -m master main    # Rename "master" to "main" from anywhere
 ```
+**Update the remote**
 
-### Merge Conflicts
+```PowerShell
+git push origin -u main        # Push renamed branch and track it remotely
+git push origin --delete master # Delete old branch from remote
+```
 
-### Git Rebase
 
-### Git Reflog and Commit History
+### 4.7 Merge Conflicts
 
-### Cherry Picking
+### 4.8 Git Rebase
 
-### Git Stashing
+### 4.9 Git Reflog and Commit History
 
-### Push To GitHub
+### 4.10 Cherry Picking
 
-### Git Clone and Push Feature Branch
+### 4.11 Git Stashing
+
+### 4.12 Push To GitHub
+
+### 4.13 Git Clone and Push Feature Branch
 
 
 **Common dbt-git workflow:**
 
 `edit dbt model` - `dbt run` - `dbt test` - `git status` - `git add` - `git commit` - `git push`
 
-### 4.__ Config Git Commands
+### 4.14 Config Git Commands
 
 ```PowerShell
 # Check current configuration
