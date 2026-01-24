@@ -405,10 +405,16 @@ git init # Converts the folder into a Git repository
 ### 4.3 Git Add and Git Commit
 
 ```PowerShell
-git add .                              # Stage all changes in the folder
-git add file_name.ext                  # Stage only a specific file
-git add file1.txt file2.csv file3.py   # Stage multiple specific files at once
-git commit -m "initial commit"         # Commit staged changes with a message
+git add .                                    # Stage all changes in the folder
+git add file_name.ext                        # Stage only a specific file
+git add file1.txt file2.csv file3.py         # Stage multiple specific files at once
+
+# Stage files that share a pattern
+git add *.py                                 # Stage all Python files in the folder
+
+git commit -m "initial commit"               # Commit staged changes with a message
+
+git commit file1.txt file2.py -m "Message"   # Commit only specific files, leaving others staged
 ```
 
 ### 4.4 Git Log
