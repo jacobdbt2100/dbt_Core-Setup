@@ -434,6 +434,9 @@ git switch new_branch        # Alternative to checkout (Git 2.23+)
 
 git checkout -b new_branch   # Create and switch to a new branch
 git switch -c new_branch     # Alternative to checkout (Git 2.23+)
+
+git branch -m main           # Rename current branch to "main"
+git branch -m master main    # Rename "master" to "main" from anywhere
 ```
 
 ### Merge Conflicts
