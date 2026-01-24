@@ -406,7 +406,7 @@ git init # Converts the folder into a Git repository
 
 ### 4.2 Git Insiders
 
-`.git` Flow: `Working Directory` > `Staging Area (Snapshot)` > `Repository`
+**.git Flow:** `Working Directory` > `Staging Area (Snapshot)` > `Repository`
 
 
 ### 4.3 Git Add and Git Commit
@@ -477,7 +477,7 @@ git push origin --delete master   # Delete old branch from remote
 
 **Common dbt-git workflow:**
 
-`edit dbt model` - `dbt run` - `dbt test` - `git status` - `git add` - `git commit` - `git push`
+`edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
 ### 4.14 Config Git Commands
 
