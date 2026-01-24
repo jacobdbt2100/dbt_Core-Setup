@@ -328,10 +328,7 @@ columns:
 
 ### 3.8 Test the source(s) and model(s)
 
-
-
-
-
+`dbt tests` **validates data (checks data quality)** — like `missing values`, `duplicates`, `accepted values`, or `mismatched relationships between tables`.
 
 
 
@@ -342,26 +339,14 @@ Run:
 ```PowerShell
 dbt test
 ```
-`dbt tests` help **validate data quality** — like `missing values`, `duplicates`, or `mismatched relationships between tables`.
 
 
 
 
-**TESTS** Summary:
 
-`tests/` **folder**: singular / custom SQL tests (complex rules, multi-column checks, business logic)
 
-`schema.yml`: generic tests (not_null, unique, accepted_values, relationships)
 
-**model SQL via** `config()`: can define generic tests, but **less common / not recommended**
 
-> **Summary — What Goes Where**
-
-| Type              | Purpose                                                                     | Location                | Defined in  |
-| ----------------- | --------------------------------------------------------------------------- | ----------------------- | ----------- |
-| Generic Test      | Common checks like `not_null`, `unique`, `accepted_values`, `relationships` | `schema.yml`            | YAML syntax |
-| Custom SQL Test   | One-off data quality checks                                                 | `/tests/` folder        | SQL query   |
-| Custom Macro Test | Reusable test logic                                                         | `/macros/tests/` folder | Jinja macro |
 
 > **How to Run Tests:**
 
@@ -379,10 +364,15 @@ dbt test
 | Run tests for both models together                     | `dbt test --select customers orders`                              |
 | Run only `not_null` and `unique` tests for both models | `dbt test --select customers orders -s test_type:not_null,unique` |
 
+
+**Note:**
+- `Node selection` applies to `dbt test`, similar to `dbt run`
+
 ## 4. Version Control with Git
 ### 4.1 Initialize Git
 
-
+- gitignore
+- ...
 
 
 ## 5. Advanced dbt Concepts
