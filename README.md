@@ -432,6 +432,31 @@ git commit file1.txt file2.py -m "Message"   # Commit only specific files, leavi
 
 ### 4.3 Git Log
 
+**displays commit history and metadata**
+
+```PowerShell
+git log   # Show the commit history of the current branch
+```
+
+**It shows:**
+- Commit hashes (IDs)
+- Author
+- Date and time
+- Commit messages and
+- Optionally, the changes made
+
+**Optional Variations:**
+
+```PowerShell
+git log --oneline     # Show each commit on a single line
+git log --graph       # Show branch structure visually
+git log --stat        # Show summary of files changed and lines added/removed in each commit
+git log -p            # Show the actual code changes (diff) for each commit
+git log --name-only   # Show only the names of files changed
+git log --decorate    # Show branch and tag names on commits
+
+git log --oneline --graph --all   # Clean visual history of all branches
+```
 
 ### 4.4 Gitignore & Gitkeep
 
@@ -442,7 +467,7 @@ git commit file1.txt file2.py -m "Message"   # Commit only specific files, leavi
 ```PowerShell
 git branch                   # List all local branches and show the current branch
 
-git branch new_branch        # Create a new branch (does not switch to it) # The new branch is created from the head of the current branch (usually main)
+git branch new_branch        # Create a new branch (does not switch to it) # The new branch is created from the head (latest commit) of the current branch (usually main) by default
 
 git checkout new_branch      # Switch to an existing branch (new_branch)
 git switch new_branch        # Alternative to checkout (Git 2.23+)
