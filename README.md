@@ -493,6 +493,7 @@ data/*.csv   # Ignore dataset CSVs
 ```
 
 **Note:**
+
 Once a file is **already tracked by Git**, adding it to **`.gitignore` does not remove it from version control** - you must **untrack** it first with:
 
 ```PowerShell
