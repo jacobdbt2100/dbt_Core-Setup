@@ -485,7 +485,9 @@ file_name.txt   # Ignore file_name.txt
 
 *.log           # Ignore all log files
 
-.../build/         # Ignore build folder
+build/          # Ignore any 'build' folder relative to the location of this .gitignore file
+
+/build/         # Ignore only the 'build' folder in the root of the repository
 
 data/*.csv      # Ignore dataset CSVs
 ```
