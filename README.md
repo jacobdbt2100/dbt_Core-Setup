@@ -471,6 +471,35 @@ It is **typically** used to **exclude**:
 
 **Another advantage** of `.gitignore:` it **prevents ignored files from appearing as untracked in `git status`**, keeping the working directory list clean and focused.
 
+**Location:**
+- `.gitignore` should be created in the root directory (parent folder) of your Git repository.
+
+**Add files/folders to ignore:**
+
+```text
+.env         # Ignore environment files
+
+*.log        # Ignore all log files
+
+/build/      # Ignore build folder
+
+data/*.csv   # Ignore dataset CSVs
+```
+
+- You can also have additional `.gitignore` files in subdirectories to apply rules locally to that folder as below:
+
+```text
+*.csv   # Ignore all CSV files only within the data directory
+```
+
+**Note:**
+Once a file is **already tracked by Git**, adding it to **`.gitignore` does not remove it from version control** - you must **untrack** it first with:
+
+```PowerShell
+git rm --cached file_name
+```
+
+
 
 
 
