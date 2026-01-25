@@ -442,7 +442,7 @@ git commit file1.txt file2.py -m "Message"   # Commit only specific files, leavi
 ```PowerShell
 git branch                   # List all local branches and show the current branch
 
-git branch new_branch        # Create a new branch (does not switch to it)
+git branch new_branch        # Create a new branch (does not switch to it) # The new branch is created from the head of the current branch (usually main)
 
 git checkout new_branch      # Switch to an existing branch (new_branch)
 git switch new_branch        # Alternative to checkout (Git 2.23+)
