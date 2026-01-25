@@ -574,7 +574,7 @@ git push origin --delete master   # Delete old branch from remote
 
 `edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
-### 4.13 Config Git Commands
+### 4.13 Git Configuration Commands
 
 ```PowerShell
 # Check current configuration
