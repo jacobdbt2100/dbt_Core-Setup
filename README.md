@@ -432,6 +432,10 @@ git commit file1.txt file2.py -m "Message"   # Commit only specific files, leavi
 ### 4.5 Git Branches and Merges
 
 ```PowerShell
+=========
+BRANCHING
+=========
+
 git branch                   # List all local branches and show the current branch
 
 git branch new_branch        # Create a new branch (does not switch to it)
@@ -441,6 +445,16 @@ git switch new_branch        # Alternative to checkout (Git 2.23+)
 
 git checkout -b new_branch   # Create and switch to a new branch
 git switch -c new_branch     # Alternative to checkout (Git 2.23+)
+
+=======
+MERGING
+=======
+git merge branch_name   # Merge changes from 'branch_name' into the current branch
+
+
+# In practice, switch to the branch you want to update first (usually main)
+git switch main       # Switch to main branch
+git merge feature-branch  # Merge changes from feature-branch into main
 ```
 
 **Rename current branch locally**
