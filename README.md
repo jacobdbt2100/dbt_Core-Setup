@@ -510,9 +510,7 @@ git rm --cached file_name
 
 **.gitkeep:**
 
-
-
-
+Git, **by default, does not track empty folders**, but you can keep them using a placeholder file if needed for project structure or future content. To achieve this, Place one `.gitkeep` in each folder you want to track.
 
 
 
