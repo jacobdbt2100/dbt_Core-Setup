@@ -461,7 +461,9 @@ git log --oneline --graph --all   # Clean visual history of all branches
 
 ### 4.4 Gitignore & Gitkeep
 
-`.gitignore:` A file that instructs Git to **exclude specified files or directories from version control**.
+**.gitignore:**
+
+A file that instructs Git to **exclude specified files or directories from version control**.
 
 It is **typically** used to **exclude**:
 - Secrets (e.g., .env, API keys)
@@ -502,6 +504,7 @@ Once a file is **already tracked by Git**, adding it to **`.gitignore` does not 
 git rm --cached file_name
 ```
 
+**.gitkeep:**
 
 
 
