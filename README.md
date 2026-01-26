@@ -629,7 +629,11 @@ git reset --hard HEAD~2        # Move HEAD back 2 commits
 git reset --hard <commit-id>   # Move HEAD to a specific commit hash
 ```
 
-`git reset --hard` can restore a committed file that was deleted from the working directory and staged.
+`git reset --hard` can **restore a committed file** that was **deleted** from the **working directory** and **staged**.
+
+
+
+
 
 
 
