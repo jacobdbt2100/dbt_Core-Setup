@@ -687,13 +687,14 @@ git cherry-pick a1b2c3d..f6g7h8i      # Apply all commits between these two comm
 - Preserves original work safely, so it can be reapplied later
 
 ```PowerShell
-git stash           # Save all uncommitted changes to a stash
-git stash list      # Show all saved stashes
-git stash apply     # Reapply the latest stash without removing it
-git stash pop       # Reapply the latest stash and remove it from stash list
-git stash drop      # Delete a specific stash
-git stash push file1.txt file2.txt   # Stash only specific files
+git stash push -m "WIP: message"                           # Save all uncommitted changes with a message
+git stash list                                             # Show all saved stashes
+git stash apply                                            # Reapply the latest stash without removing it
+git stash pop                                              # Reapply the latest stash and remove it from stash list
+git stash drop                                             # Delete a specific stash
+git stash push -m "WIP file1, file2" file1.txt file2.txt   # Stash only specific files with a message
 ```
+
 
 
 
