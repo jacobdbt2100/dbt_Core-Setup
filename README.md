@@ -620,10 +620,16 @@ git log --oneline   # Shows visible commit history of the current branch
 - `Undo mistakes;` move HEAD back to a previous state or lets you rewind your branch to a previous point in time (time travel).
 - `Track local actions;` lets you see recent branch and HEAD movements not visible in git log.
 
+**Two practical ways to `time travel` in Git:**
 
+1. Go to a previous commit using HEAD reference
+2. Go to a specific commit using its hash/ID
 
-
-
+```PowerShell
+git reset --hard HEAD~1        # Move HEAD to the previous commit (1 step back)
+git reset --hard HEAD~2        # Move HEAD back 2 commits
+git reset --hard <commit-id>   # Move HEAD to a specific commit hash
+```
 
 
 
