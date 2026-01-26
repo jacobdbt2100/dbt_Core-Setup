@@ -552,6 +552,7 @@ git push origin --delete master   # Delete old branch from remote
 
 ### 4.6 Merge Conflicts
 
+A situation where Git **cannot automatically merge changes** because **two or more branches modified the same or overlapping lines in a file**. Git needs human decision to resolve competing changes.
 
 
 
