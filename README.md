@@ -637,7 +637,7 @@ git reset --hard <commit-id>   # Move HEAD to a specific commit hash (recommende
 
 **Common uses:**
 
-```PowerShell
+```diff
 git diff                  # Changes in working directory not staged
 git diff --staged         # Changes staged for next commit
 git diff HEAD             # All changes since last commit
