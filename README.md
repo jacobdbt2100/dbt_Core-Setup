@@ -578,12 +578,29 @@ A situation where Git **cannot automatically merge changes** because **two or mo
 - Changes commit hashes and order.
 - Intended to create a linear history but modifies history, unlike FF merge.
 
+**Benefits of rebase:**
+- `Cleaner history;` linear commit log without unnecessary merge commits.
+- `Easier to read git log;` clearer story of how changes evolved.
+- `Keeps main branch tidy;` especially useful before merging feature branches.
+- `Helps resolve conflicts earlier;` you handle them while updating your branch, not at merge time.
+
+**Rebase:**
+
 ```PowerShell
-git switch rebase_feature    # You are on the rebase_feature branch
-git rebase main              # Replay commits of feature on top of main
+git switch rebase_feature      # Move to the rebase_feature branch
+git rebase main                # Replay rebase_feature commits on top of main's latest commit
 ```
 
 `git rebase main` takes the commits that exist on the **current branch** (`rebase_feature`) onto the **HEAD (latest commit)** of main, then moves the **current branch** (`rebase_feature`) to point to this new history.
+
+**Merge after Rebase:**
+
+```PowerShell
+git switch main                # Move back to main
+git merge rebase_feature       # Fast-forward main to include rebased commits (no merge commit created)
+```
+
+`Merge commit` is created when both branches contain unique commits, so Git must combine histories instead of moving the branch pointer.
 
 ### 4.8 Git Reflog and Commit History
 
