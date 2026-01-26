@@ -450,6 +450,8 @@ git log   # Show the commit history of the current branch
 ```PowerShell
 git log --oneline     # Show each commit on a single line
 
+# Press "Q" to unfreeze when PowerShell freezes after "git log", possibly due to so many logs.
+
 git log --graph       # Show branch structure visually
 git log --stat        # Show summary of files changed and lines added/removed in each commit
 git log -p            # Show the actual code changes (diff) for each commit
@@ -605,6 +607,22 @@ git merge rebase_feature       # Fast-forward main to include rebased commits (n
 ### 4.8 Git Reflog and Commit History
 
 Time travelling...
+
+```PowerShell
+git reflog          # Shows local history of HEAD movements (even hidden commits)
+
+# Compared to "git log --oneline"
+git log --oneline   # Shows visible commit history of the current branch
+```
+
+**Benefits of `git reflog`:**
+- `Recover lost commits;` find commits removed by reset, rebase, or amend - commit that’s no longer in the visible history (time travel).
+- `Undo mistakes;` move HEAD back to a previous state or lets you rewind your branch to a previous point in time (time travel).
+- `Track local actions;` lets you see recent branch and HEAD movements not visible in git log.
+
+
+
+
 
 
 
