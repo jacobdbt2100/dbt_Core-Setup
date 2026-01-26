@@ -656,9 +656,25 @@ index e69de29..4b825dc 100644
 +print("Git is fun")     # Another line added
 ```
 
+```PowerShell
+diff --git a/app.py b/app.py
+index e69de29..4b825dc 100644
+--- a/app.py
++++ b/app.py
+@@ -0,0 +1,3 @@
++print("Hello World")    # Line added in working directory (unstaged change)
++print("Git is fun")     # Another line added
+```
 
-
-
+```bash
+diff --git a/app.py b/app.py
+index e69de29..4b825dc 100644
+--- a/app.py
++++ b/app.py
+@@ -0,0 +1,3 @@
++print("Hello World")    # Line added in working directory (unstaged change)
++print("Git is fun")     # Another line added
+```
 
 
 
