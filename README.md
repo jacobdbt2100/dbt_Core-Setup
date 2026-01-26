@@ -557,8 +557,8 @@ git branch -d branch_name   # Delete local branch (only if fully merged)
 git branch -D branch_name   # Force delete local branch (even if not merged)
 ```
 
-```PowerShell
 **Delete a remote branch:**
+```PowerShell
 git push origin --delete branch_name   # Delete branch from remote repository
 ```
 
