@@ -574,9 +574,9 @@ A situation where Git **cannot automatically merge changes** because **two or mo
 
 ### 4.7 Git Rebase
 
-
-
-
+- **Rewrites commit history** by taking commits from one branch and replaying them on top of another branch.
+- Changes commit hashes and order.
+- Intended to create a linear history but modifies history, unlike FF merge.
 
 
 
