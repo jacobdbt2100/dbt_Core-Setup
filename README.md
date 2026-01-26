@@ -512,10 +512,6 @@ git rm --cached file_name
 
 Git, **by default, does not track empty folders**, but you can keep them using a placeholder file if needed for project structure or future content. To achieve this, Place one `.gitkeep` in each folder you want to track.
 
-
-
-
-
 ### 4.5 Git Branches and Merges
 
 **Branch:**
@@ -554,8 +550,16 @@ git push -u origin main           # Push renamed branch and track it remotely
 git push origin --delete master   # Delete old branch from remote
 ```
 
-
 ### 4.6 Merge Conflicts
+
+
+
+
+
+
+
+
+
 
 ### 4.7 Git Rebase
 
@@ -569,12 +573,9 @@ git push origin --delete master   # Delete old branch from remote
 
 ### 4.12 Git Clone and Push Feature Branch
 
+### 4.13 Addendum
 
-**Common dbt-git workflow:**
-
-`edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
-
-### 4.13 Git Configuration Commands
+**Git Configuration Commands:**
 
 ```PowerShell
 # Check current configuration
@@ -595,7 +596,8 @@ git config --global --unset user.name    # Use name
 git config --global --unset user.email   # Use email
 ```
 
+**Common dbt-git workflow:**
 
-
+`edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
 ## 5. Advanced dbt Concepts
