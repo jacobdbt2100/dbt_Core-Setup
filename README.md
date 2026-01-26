@@ -536,6 +536,17 @@ git switch branch_name        # Switch to branch_name
 git merge feature_branch      # Merge changes from feature_branch into the current branch (branch_name)
 ```
 
+`Two main types of Git merges:`
+- **Fast-forward merge (FF merge):** Git moves the target branch pointer forward to the source branch’s latest commit **without creating a merge commit**, because the target branch has no new commits since the branches diverged.
+- **Three-way merge (normal merge):** Git combines changes from two branches by creating a new merge commit when both branches have new commits.
+
+It’s called **three-way** because Git uses three points to compute the merge: `Base commit`; the common ancestor of the branches, `Head of target branch`; where you are merging into, `Head of source branch`; the branch being merged.
+
+
+
+
+
+
 **Rename current branch locally:**
 
 ```PowerShell
