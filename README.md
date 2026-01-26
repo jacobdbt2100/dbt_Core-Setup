@@ -665,15 +665,19 @@ index e69de29..4b825dc 100644
 +print("Git is fun")          # Another line added
 ```
 
-
-
-
-
-
-
-
-
 ### 4.10 Cherry Picking
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 4.11 Git Stashing
 
