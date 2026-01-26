@@ -667,10 +667,16 @@ index e69de29..4b825dc 100644
 
 ### 4.10 Cherry Picking
 
+`git cherry-pick:` applies **one or more specific commit(s)** from another branch onto the current branch, bringing in **only the chosen changes without merging the entire branch**.
 
+```PowerShell
+git switch main                       # Move to the branch where you want the commit
 
+git cherry-pick <commit-hash>         # Apply the specified commit from another branch onto the current branch # Creates a new commit on the target branch with a new commit hash
 
-
+git cherry-pick <commit1> <commit2>   # Apply multiple specific commits in order
+git cherry-pick <commit1>~3..HEAD     # Apply a range of commits from another branch
+```
 
 
 
