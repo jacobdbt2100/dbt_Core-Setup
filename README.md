@@ -704,30 +704,35 @@ git stash drop "stash@{n}"                                 # Delete a specific s
 
 ### 4.12 Push To GitHub
 
-### 4.13 Git Clone and Push Feature Branch
-
-### 4.14 Addendum
-
-**Git Configuration Commands:**
+**Git Config:**
 
 ```PowerShell
 # Check current configuration
 git config user.name
 git config user.email
 
-# Set your name and email
+# Set your name and email (Global Config Recommended)
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 
 # Levels (Scopes) of git config;
 System (--system); Applies to all users on the machine
-Global (--global); Applies to your user account
+Global (--global); Applies to your user account (RECOMMENDED)
 Local (no flag); Applies only to the current project
 
 # Remove a config
 git config --global --unset user.name    # Use name
 git config --global --unset user.email   # Use email
 ```
+
+
+
+
+
+### 4.13 Git Clone and Push Feature Branch
+
+
+
 
 **Common dbt-git workflow:**
 
