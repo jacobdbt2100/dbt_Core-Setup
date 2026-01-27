@@ -704,6 +704,14 @@ git stash drop "stash@{n}"                                 # Delete a specific s
 
 ### 4.12 Push To GitHub
 
+- **Local repository:** The Git repository on your machine where you **make commits and manage your project history locally**.
+- **Remote repository:** A copy of the **repository hosted on a server** (e.g., GitHub) for **sharing, backup, and collaboration**.
+- `git push` sends commits **from your local repository** to **the remote repository** (GitHub)
+- This is how your local work becomes visible and accessible online to others.
+
+
+
+
 **Git Config:**
 
 ```PowerShell
