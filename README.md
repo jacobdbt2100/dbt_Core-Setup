@@ -752,12 +752,22 @@ git remote add origin "url"    # Link the local repository to a remote named "or
 git remote set-url origin https://github.com/dev-team/project.git       # Fetch updates from the development repository
 git remote set-url --push origin git@github.com:deployment/project.git  # Push changes to the deployment repository
 ```
-6. Switch to branch to be merged
+6. Final steps:
 
 ```PowerShell
-git switch main
-```
+git switch main   # Switch to branch to be merged (main)
 
+
+
+git push origin main       # Push local 'main' to remote 'origin'
+                           # Does NOT set an upstream; future pushes require specifying remote and branch
+
+git push -u origin main    # Push local 'main' to remote 'origin'
+                           # Sets 'main' as upstream for the local branch
+                           # Future 'git push' or 'git pull' can be done without specifying remote/branch
+
+git branch --unset-upstream   # Remove upstream link; future git push/pull must specify remote/branch
+```
 
 
 
