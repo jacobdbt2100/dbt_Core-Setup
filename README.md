@@ -711,7 +711,7 @@ git stash drop "stash@{n}"                                 # Delete a specific s
 git config user.name
 git config user.email
 
-# Set your name and email (Global Config Recommended)
+# Set your name and email (Global Config Recommended) # Overwrites previous Config, if any.
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 
