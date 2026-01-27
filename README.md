@@ -731,9 +731,6 @@ git config --global --unset user.email   # Use email
 
 ### 4.13 Git Clone and Push Feature Branch
 
-
-
-
 **Common dbt-git workflow:**
 
 `edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
