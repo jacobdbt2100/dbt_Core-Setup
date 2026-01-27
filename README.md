@@ -752,6 +752,13 @@ git remote add origin "url"    # Link the local repository to a remote named "or
 git remote set-url origin https://github.com/dev-team/project.git       # Fetch updates from the development repository
 git remote set-url --push origin git@github.com:deployment/project.git  # Push changes to the deployment repository
 ```
+6. Switch to branch to be merged
+
+```PowerShell
+git switch main
+```
+
+
 
 
 
