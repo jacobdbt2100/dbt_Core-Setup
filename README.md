@@ -817,7 +817,7 @@ git status              # Confirm this is a Git repository and see current branc
 
 **Push Feature Branch:**
 
-Whenever we create any repo, we do not make changes directly in that branch (main). We always create a new branch called "feature branch".
+Whenever we create a repository, we **do not make changes directly on the main branch**. Instead, we **create and work on** a separate branch called a **feature branch**.
 
 ```PowerShell
 git switch -c feature_1 # Create and switch to new branch (feature_1)
