@@ -769,6 +769,16 @@ git branch --unset-upstream   # Remove upstream link; future git push/pull must 
 
 Then **connect to GitHub** using **Personal access token** or some other method (from pop up on screen)
 
+If error (............
+
+```pgsql
+! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/user/repo.git'
+hint: Updates were rejected because the remote contains work that you do
+not have locally. This is usually caused by another repository pushing
+to the same ref. You may want to first integrate the remote changes
+(e.g., 'git pull ...') before pushing again.
+```
 
 
 
