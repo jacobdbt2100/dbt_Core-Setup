@@ -819,19 +819,13 @@ git status              # Confirm this is a Git repository and see current branc
 
 Whenever we create any repo, we do not make changes directly in that branch (main). We always create a new branch called "feature branch".
 
-
-
-
-
-
-
 ```PowerShell
 git switch -c feature_1 # Create and switch to new branch (feature_1)
 
-# Add a new file
+# Add a new file or modify an existing one
 
 git status # check...
-git add .
+git add .  # 
 git commit -m "commit message" #
 git branch # 
             #  We are currently on the feature branch
@@ -839,12 +833,13 @@ git branch #
             #  Every time, we push the branch to the remote repo and simply merge it there. That's good practice.
 
 git remote -v #  Confirm origin
-              #  You do not need the origin in order to push to the remote because you created the repo using clone method;
+              #  You do not need to add the origin in order to push to the remote because you created the repo using clone method;
               #  So git authomatically set the cloned url as your origin
 
-git push origin feature_branch # (what happens here)
+git push origin feature_1    # Push the local branch "feature_1" to the remote repository (origin)
 ```
 `git` won't ask for `Personal access token`. It will simply cache the `Personal access token` when you provide it.
+
 
 
 
