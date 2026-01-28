@@ -827,7 +827,7 @@ git switch -c feature_1 # Create and switch to new branch (feature_1)
 git status # check...
 git add .  # 
 git commit -m "commit message" #
-git branch # 
+git branch  #  ...
             #  We are currently on the feature branch
             #  We can merge feature_1 branch into the main branch and then push the main branch again, but we never do that
             #  Every time, we push the branch to the remote repo and simply merge it there. That's good practice.
@@ -837,8 +837,10 @@ git remote -v #  Confirm origin
               #  So git authomatically set the cloned url as your origin
 
 git push origin feature_1    # Push the local branch "feature_1" to the remote repository (origin)
+                             # "git" won't ask for "Personal access token". It will simply cache the `Personal access token` when you provide it.
+                             # You can revoke the token, then "git" will ask for a new one.
 ```
-`git` won't ask for `Personal access token`. It will simply cache the `Personal access token` when you provide it.
+
 
 
 
