@@ -629,7 +629,7 @@ git reset --hard HEAD~2        # Move HEAD back 2 commits
 git reset --hard <commit-id>   # Move HEAD to a specific commit hash (recommended)
 ```
 
-`git reset --hard` can **restore a committed file** that was **deleted** from the **working directory** and **staged**.
+`git reset --hard <commit-id>` can **restore a committed file (undo push commit)** that was **deleted** from the **working directory** and **staged**.
 
 **Similar commands:**
 
@@ -757,8 +757,6 @@ git remote set-url --push origin git@github.com:deployment/project.git  # Push c
 ```PowerShell
 git switch main   # Switch to branch to be merged (main)
 
-
-
 git push origin main       # Push local 'main' to remote 'origin'
                            # Does NOT set an upstream; future pushes require specifying remote and branch
 
@@ -769,7 +767,18 @@ git push -u origin main    # Push local 'main' to remote 'origin'
 git branch --unset-upstream   # Remove upstream link; future git push/pull must specify remote/branch
 ```
 
+Then **connect to GitHub** using **Personal access token** or some other method (from pop up on screen)
 
+
+
+
+
+**Undo pushed commit on the remote:**
+
+```PowerShell
+git reset --hard <previous_commit_hash>   # Move your local main back (undo commit)
+git push --force origin main              # Overwrite remote main with your local state
+```
 
 
 
