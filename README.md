@@ -817,6 +817,15 @@ git status              # Confirm this is a Git repository and see current branc
 
 **Push Feature Branch:**
 
+Can create a feature_branch, make some commits, and push. But that is not done.
+
+Rather, we push the branch to the remote repo and simply merge it there. That's good practice.
+
+You do not need the origin in order to push to the remote, because you created the repo using clone method, so git authomatically set the clone url as your origin.
+
+```PowerShell
+git push origin feature_branch
+```
 
 
 
