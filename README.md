@@ -817,16 +817,36 @@ git status              # Confirm this is a Git repository and see current branc
 
 **Push Feature Branch:**
 
-Can create a feature_branch, make some commits, and push. But that is not done.
+Whenever we create any repo, we do not make changes directly in that branch (main). We always create a new branch called "feature branch".
 
-Rather, we push the branch to the remote repo and simply merge it there. That's good practice.
 
-You do not need the origin in order to push to the remote, because you created the repo using clone method, so git authomatically set the clone url as your origin.
+
+
+
+
 
 ```PowerShell
+git switch -c feature_1 # Create and switch to new branch (feature_1)
+
+# Add a new file
+
+git status # check...
+git add .
+git commit -m "commit message" #
+git branch # 
+            #  We are currently on the feature branch
+            #  We can merge feature_1 branch into the main branch and then push the main branch again, but we never do that
+            #  Every time, we push the branch to the remote repo and simply merge it there. That's good practice.
+
+git remote -v #  Confirm origin
+              #  You do not need the origin in order to push to the remote because you created the repo using clone method;
+              #  So git authomatically set the cloned url as your origin
+
 git push origin feature_branch # (what happens here)
 ```
 `git` won't ask for `Personal access token`. It will simply cache the `Personal access token` when you provide it.
+
+
 
 
 
