@@ -769,7 +769,7 @@ git branch --unset-upstream   # Remove upstream link; future git push/pull must 
 
 Then **connect to GitHub** using **Personal access token** or some other method (from pop up on screen)
 
-If error (............
+**If error like...**
 
 ```diff
 ! [rejected]        main -> main (fetch first)
@@ -779,21 +779,22 @@ not have locally. This is usually caused by another repository pushing
 to the same ref. You may want to first integrate the remote changes
 (e.g., 'git pull ...') before pushing again.
 ```
+**Explanation:**
+- Git **prevents** you from **overwriting commits on the remote** that your local **branch doesn’t have**, to avoid losing someone else’s work.
+- You need to **sync with the remote first**, either by `git pull` (merge or rebase) or by force pushing if you really intend to overwrite.
 
 
 
 
-**Undo pushed commit on the remote:**
+
+
+
+**To undo pushed commit on the remote:**
 
 ```PowerShell
 git reset --hard <previous_commit_hash>   # Move your local main back (undo commit)
 git push --force origin main              # Overwrite remote main with your local state
 ```
-
-
-
-
-
 
 ### 4.13 Git Clone and Push Feature Branch
 
