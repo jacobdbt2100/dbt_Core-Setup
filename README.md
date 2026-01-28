@@ -848,6 +848,43 @@ git push origin feature_1    # Push the local branch "feature_1" to the remote r
 
 # New file (or modification) is now added
 ```
+=====================================================================
+
+```PowerShell
+git switch -c feature_1      # Create and switch to a new branch named "feature_1"
+
+# Add a new file or modify an existing one
+
+git status                   # Check the state of the working directory and staging area
+git add .                    # Stage all changes
+git commit -m "commit message"  # Commit staged changes with a message
+
+git branch                   # List branches and show the current branch (* = active)
+                             # We are currently on the feature branch
+                             # You could merge feature_1 into main locally, but best practice is:
+                             # Push the feature branch and merge via a Pull Request on GitHub
+
+git remote -v                # Confirm the remote named "origin"
+                             # If the repo was cloned, Git automatically sets the cloned URL as origin
+
+git push origin feature_1    # Push the local "feature_1" branch to the remote (origin)
+                             # Git will prompt for a Personal Access Token once and then cache it
+                             # If the token is revoked, Git will ask for a new one
+
+# The pushed branch now appears on GitHub with a "Compare & pull request" option
+# You will see two branches: main and feature_1
+# Open a Pull Request by clicking "Compare & pull request"
+# Add a title (optional), add a description (optional), review changes (Unified or Split view)
+# Click "Create pull request" → "Merge pull request" → "Confirm merge" to accept the changes
+
+# The new file (or modification) is now merged into the main branch
+```
+
+
+
+
+
+
 
 
 
