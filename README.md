@@ -811,7 +811,7 @@ git push --force origin main              # Overwrite remote main with your loca
 
 
 
-**Bonu: `Common dbt-git workflow`**
+**Bonus: `Common dbt-git workflow`**
 
 `edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
