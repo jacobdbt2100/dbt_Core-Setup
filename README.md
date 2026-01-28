@@ -760,7 +760,7 @@ git switch main   # Switch to branch to be merged (main)
 git push origin main       # Push local 'main' to remote 'origin'
                            # Does NOT set an upstream; future pushes require specifying remote and branch
 
-git push -u origin main    # Push local 'main' to remote 'origin'
+git push -u origin main    # Alternative to "git push origin main"
                            # Sets 'main' as upstream for the local branch
                            # Future 'git push' or 'git pull' can be done without specifying remote/branch
 
@@ -782,6 +782,19 @@ to the same ref. You may want to first integrate the remote changes
 **Explanation:**
 - Git **prevents** you from **overwriting commits on the remote** that your local **branch doesn’t have**, to avoid losing someone else’s work.
 - You need to **sync with the remote first**, either by `git pull` (merge or rebase) or by force pushing if you really intend to overwrite.
+
+```PowerShell
+git pull origin main   # Fetch and merge changes from the remote 'main' branch into the current local branch
+                       # Might fail due to unrelated histories 
+
+git pull origin main --allow-unrelated-histories    # Fetch and merge the remote 'main' branch even if the local and remote histories are unrelated
+                                                    # Git normally refuses this when the local repo was created from scratch
+                                                    # Recommended workflow to avoid this issue: create the remote repo first, then clone locally
+
+git push origin main   # Push local 'main' to remote 'origin'
+```
+
+
 
 
 
