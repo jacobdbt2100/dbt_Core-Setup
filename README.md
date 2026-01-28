@@ -794,15 +794,7 @@ git pull origin main --allow-unrelated-histories    # Fetch and merge the remote
 git push origin main   # Push local 'main' to remote 'origin'
 ```
 
-
-
-
-
-
-
-
-
-**To undo pushed commit on the remote:**
+**Bonus: `To undo pushed commit on the remote`**
 
 ```PowerShell
 git reset --hard <previous_commit_hash>   # Move your local main back (undo commit)
@@ -811,7 +803,15 @@ git push --force origin main              # Overwrite remote main with your loca
 
 ### 4.13 Git Clone and Push Feature Branch
 
-**`Common dbt-git workflow:`**
+
+
+
+
+
+
+
+
+**Bonu: `Common dbt-git workflow`**
 
 `edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
