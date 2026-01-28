@@ -824,9 +824,9 @@ Rather, we push the branch to the remote repo and simply merge it there. That's 
 You do not need the origin in order to push to the remote, because you created the repo using clone method, so git authomatically set the clone url as your origin.
 
 ```PowerShell
-git push origin feature_branch
+git push origin feature_branch # (what happens here)
 ```
-
+`git` won't ask for `Personal access token`. It will simply cache the `Personal access token` when you provide it.
 
 
 
