@@ -820,37 +820,6 @@ git status              # Confirm this is a Git repository and see current branc
 Whenever we create a repository, we **do not make changes directly on the main branch**. Instead, we **create and work on** a separate branch called a **feature branch**.
 
 ```PowerShell
-git switch -c feature_1 # Create and switch to new branch (feature_1)
-
-# Add a new file or modify an existing one
-
-git status # check...
-git add .  # 
-git commit -m "commit message" #
-git branch  #  ...
-            #  We are currently on the feature branch
-            #  We can merge feature_1 branch into the main branch and then push the main branch again, but we never do that
-            #  Every time, we push the branch to the remote repo and simply merge it there. That's good practice.
-
-git remote -v #  Confirm origin
-              #  You do not need to add the origin in order to push to the remote because you created the repo using clone method;
-              #  So git authomatically set the cloned url as your origin
-
-git push origin feature_1    # Push the local branch "feature_1" to the remote repository (origin)
-                             # "git" won't ask for "Personal access token". It will simply cache the `Personal access token` when you provide it.
-                             # You can revoke the token, then "git" will ask for a new one.
-
-# feature_1 push appears in "Remote Repo" with "Compare & pull request" option
-# Observe two branches present; main and feature_1
-# Now create pull request (fetch & merge) by clicking on "Compare & pull request"
-# Add a title (Optional) # Add a description (Optional) # See "Split" or "Unified" changes
-# Click on "Create pull request", "Create pull request", "Merge pull request", and "Confirm merge" to accept changes
-
-# New file (or modification) is now added
-```
-=====================================================================
-
-```PowerShell
 git switch -c feature_1      # Create and switch to a new branch named "feature_1"
 
 # Add a new file or modify an existing one
@@ -868,31 +837,18 @@ git remote -v                # Confirm the remote named "origin"
                              # If the repo was cloned, Git automatically sets the cloned URL as origin
 
 git push origin feature_1    # Push the local "feature_1" branch to the remote (origin)
-                             # Git will prompt for a Personal Access Token once and then cache it
-                             # If the token is revoked, Git will ask for a new one
+                             # If the repo was cloned and credentials already exist, Git will not prompt again
+                             # Git only prompts for a Personal Access Token when no valid credentials are available
+                             # If the token is revoked or expires, Git will request a new one
 
 # The pushed branch now appears on GitHub with a "Compare & pull request" option
 # You will see two branches: main and feature_1
 # Open a Pull Request by clicking "Compare & pull request"
 # Add a title (optional), add a description (optional), review changes (Unified or Split view)
-# Click "Create pull request" → "Merge pull request" → "Confirm merge" to accept the changes
+# Click "Create pull request" > "Merge pull request" > "Confirm merge" to accept the changes
 
 # The new file (or modification) is now merged into the main branch
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 **Bonus: `Common dbt-git workflow`**
 
