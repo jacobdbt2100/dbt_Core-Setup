@@ -376,6 +376,22 @@ dbt test --select source:sales_data.customers
 **Note:**
 - `Node selection` applies to `dbt test`, similar to `dbt run`
 
+### 3.9 Other `dbt` commands
+
+```PowerShell
+# Checks configs, YAML, and Jinja; does not touch the database
+dbt parse      # confirm: command finishes without errors
+
+# Renders models into final SQL; does not execute anything
+dbt compile    # confirm: compiled SQL appears in target/compiled/
+
+# Removes build artifacts (target/, dbt_packages/)
+dbt clean      # confirm: folders are deleted and recreated on next run
+
+# Runs models, tests, snapshots, and seeds in dependency order
+dbt build      # confirm: models created and tests pass without errors
+```
+
 ## 4. Version Control with Git
 
 - `Git:` A version control system that tracks changes in files.
