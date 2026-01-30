@@ -161,6 +161,7 @@ All checks passed!
 {{ config(materialized='view') }}
     -- Optional: overrides the model’s materialization defined in schema.yml (not advised) or dbt_project.yml (more preferred)
     -- model-level config has the highest priority
+{{ config(alias='model_alias') }} -- Optional
 
 select
     order_id,
