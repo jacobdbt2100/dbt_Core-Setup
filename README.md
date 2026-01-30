@@ -432,9 +432,9 @@ dbt build      # confirm: models created and tests pass without errors
   - Contains singular / custom SQL tests for models or business logic.
   - Runs alongside generic tests in schema.yml.
 
-#### Mnemonic sentence for `dbt folders`:
+#### Mnemonic sentence for `dbt folders`
 
-**All Little Macros Make Some Small Tidy Tables**
+`All Little Macros Make Some Small Tidy Tables:`
 
 | Word   | Folder    | Role (quick)              |
 | ------ | --------- | ------------------------- |
