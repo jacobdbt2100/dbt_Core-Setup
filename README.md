@@ -973,10 +973,15 @@ git push origin feature_1    # Push the local "feature_1" branch to the remote (
 
 ## 5. Advanced dbt Concepts
 
-### Incremental models
-### Freshness checks
-### Snapshots
-### 
+
+**COMPLETE THESE FIRST:**
+1. dbt fundamentals - models, sources, tests, docs, and **deployment**
+2. Materialization
+
+**ADVANCE:**
+3. Incremental models
+4. Advanced testing; Freshness checks
+5. Snapshots (SCD 2)
 
 
 
