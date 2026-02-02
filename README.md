@@ -979,9 +979,9 @@ git push origin feature_1    # Push the local "feature_1" branch to the remote (
 2. Materialization
 
 **ADVANCE:**
-3. Incremental models
-4. Advanced testing; Freshness checks
-5. Snapshots (SCD 2)
+1. Incremental models
+2. Advanced testing; Freshness checks
+3. Snapshots (SCD 2)
 
 
 
