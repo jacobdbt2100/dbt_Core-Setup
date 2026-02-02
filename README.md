@@ -985,7 +985,11 @@ git push origin feature_1    # Push the local "feature_1" branch to the remote (
 
 
 
+### Incremental models
 
+```sql
+current_timestamp as ingested_at      # Adds a new column "ingested_at" and fills it with the date and time the query runs
+```
 
 
 
