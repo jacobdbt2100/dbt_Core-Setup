@@ -419,7 +419,15 @@ dbt test --select source:sales_data.customers
 **Note:**
 - `Node selection` applies to `dbt test`, similar to `dbt run`
 
-### 3.9 Other `dbt` commands
+### 3.9 Layers of data models
+
+Data models are **built in layers**, adding clarity, structure, and business meaning at each stage.
+
+- Staging / Bronze: Raw source data, lightly cleaned and standardised, with basic metadata, no business logic.
+- Intermediate / Silver: Cleaned, conformed, and reliable data, not yet aggregated.
+- Marts / Gold: Aggregated, business-ready models for analytics, reporting, and KPIs.
+
+### 3.10 Other `dbt` commands
 
 ```PowerShell
 # Checks configs, YAML, and Jinja; does not touch the database
@@ -435,7 +443,7 @@ dbt clean      # confirm: folders are deleted and recreated on next run
 dbt build      # confirm: models created and tests pass without errors
 ```
 
-### 3.10 dbt folders and uses
+### 3.11 dbt folders and uses
 
 **1. analyses**
   - Temporary SQL queries for exploration or reporting.
@@ -982,7 +990,6 @@ git push origin feature_1    # Push the local "feature_1" branch to the remote (
 1. Incremental models
 2. Advanced testing; Freshness checks
 3. Snapshots (SCD 2)
-
 
 
 ### Incremental models
