@@ -972,3 +972,19 @@ git push origin feature_1    # Push the local "feature_1" branch to the remote (
 `edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
 ## 5. Advanced dbt Concepts
+
+### Incremental models
+### Freshness checks
+### Snapshots
+### 
+
+
+
+
+
+
+
+
+
+
+
