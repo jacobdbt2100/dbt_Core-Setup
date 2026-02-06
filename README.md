@@ -1028,14 +1028,19 @@ where ingested_at > (select max(ingested_at) from {{ this }})      # Load only n
 - For models, **descriptions** can happen at the **model**, **source**, or **column** level.
 - If a longer form, more styled version of text would provide a strong description, **doc blocks** can be used to render **markdown** (.md) in the generated documentation.
 
-`Directory` **models/orders/orders_docs.md**
+`Directory` **models/products/product_status_docs.md**
 ```md
-{% docs order_id %}
-A unique identifier for each order.
+{% docs product_status %}
 
-Example:
-- `1001`
-- `1002`
+The status of a product in the inventory system:
+
+| Status Code | Description  | Notes       |
+|------------|-------------|------------|
+| `AVL`      | Available   | In stock   |
+| `OOS`      | Out of Stock| None       |
+| `DIS`      | Discontinued| Stopped    |
+| `BCK`      | Backordered | Pending    |
+
 {% enddocs %}
 ```
 
