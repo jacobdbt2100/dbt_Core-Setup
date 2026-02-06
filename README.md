@@ -999,21 +999,21 @@ git push origin feature_1    # Push the local "feature_1" branch to the remote (
 
 `edit dbt model` > `dbt run` > `dbt test` > `git status` > `git add` > `git commit` > `git push`
 
-## 5. Advanced dbt Concepts
+## 5. dbt Concepts (UPDATE)
 
 
 **COMPLETE THESE FIRST:**
-1. dbt fundamentals - models, sources, tests, docs, and **deployment**
-2. Materialization
+1. dbt Fundamentals - models, sources (**Source Freshness**), tests, **docs**, and **deployment**
+2. Refactoring SQL for Modularity
+3. Jinja, Macros, and Packages
+4. Materialization Fundamentals
+5. Incremental Models
+6. Snapshots
+7. Analyses and Seeds
+8. Advanced Testing
+9. Advanced Deployment
 
-**ADVANCE:**
-1. Incremental models
-2. Advanced testing
-3. Snapshots (SCD Type-2)
-4. Source freshness checks
-
-
-### Incremental models
+### Incremental Models
 
 ```sql
 current_timestamp as ingested_at      # Adds a new column "ingested_at" and fills it with the date and time the query runs
@@ -1022,6 +1022,7 @@ current_timestamp as ingested_at      # Adds a new column "ingested_at" and fill
 where ingested_at > (select max(ingested_at) from {{ this }})      # Load only new data
 ```
 
+### Deployment
 A **job** executes dbt commands in deployment environments.
 
 
