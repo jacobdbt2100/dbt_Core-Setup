@@ -1029,6 +1029,7 @@ where ingested_at > (select max(ingested_at) from {{ this }})      # Load only n
 - If a longer form, more styled version of text would provide a strong description, **doc blocks** can be used to render **markdown** (.md) in the generated documentation.
 
 `Directory` **models/products/product_status_docs.md**
+
 ```md
 {% docs product_status %}
 
@@ -1043,6 +1044,25 @@ The status of a product in the inventory system:
 
 {% enddocs %}
 ```
+
+
+`Directory` **models/staging/staging.yml**
+
+```yml
+version: 2
+
+models:
+  - name: stg_products
+    description: "{{ doc('product_status') }}"      # references the doc block
+
+    columns:
+      - name: product_id
+        description: "Unique ID for each product"
+
+      - name: status
+        description: "{{ doc('product_status') }}"  # references the doc block
+```
+
 
 ```PowerShell
 dbt docs generate  # Builds the docs files into the /target folder
