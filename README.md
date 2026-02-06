@@ -1077,7 +1077,23 @@ dbt docs serve     # Starts a local web server to view the docs in your browser
 **Note:**
 - dbt **references doc blocks** by the **doc block name**, not the file name. Hence, a single **.md** file can accommodate many doc blocks.
 
+
+
+
+
+
+
 ### Deployment
+
+**Development in dbt:**
+Building and organising dbt project files in a development environment using feature branches and a development schema, allowing changes without affecting production.
+
+**Deployment in dbt:**
+Running dbt on a schedule from the main branch in a deployment environment using a production schema, producing models that support dashboards and business decisions.
+
+**Purpose of development environments and branches:**
+They allow ongoing development without disrupting production models, tests, or documentation.
+
 A **job** executes dbt commands in deployment environments.
 
 
