@@ -1112,7 +1112,7 @@ They allow ongoing development without disrupting production models, tests, or d
 ### Creating a Deployment Environment with dbt CLI (for demonstration; no orchestration)
 
 - Manually create a source **database/catalog** and **schema** for deployment environment and populate with data.
-- Update **profiles.yml** and **source.yml** for the outputs.
+- Update `profiles.yml` outputs and update any dbt configs that reference **environment-specific databases/schemas** (e.g. `sources.yml`, snapshot configs).
 
 Original **profiles.yml**
 
@@ -1195,8 +1195,10 @@ version: 2
 
 sources:
   - name: xxxxx
-    description: "Raw goods delivery data from the company's transactional system"
-    database: '{{target.catalog}}' # Update hard-coded database value to adjust dynamically. Do same in other files (e.g., in snapshots)
+    description: "xxxxx"
+    database: "{{ target.catalog }}"  # Replace hard-coded database with dynamic target value.
+                                      # Apply the same pattern anywhere database/schema is hard-coded (e.g., snapshots).
+
     schema: schema_dev
     tables:
 
