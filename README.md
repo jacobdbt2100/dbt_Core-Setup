@@ -1022,6 +1022,12 @@ current_timestamp as ingested_at      # Adds a new column "ingested_at" and fill
 where ingested_at > (select max(ingested_at) from {{ this }})      # Load only new data
 ```
 
+### Documentation
+
+- Documentation of models occurs in the YML files (where generic tests also live) inside the models directory. It is helpful to store the YML file in the same subfolder as the models you are documenting.
+- For models, **descriptions** can happen at the **model**, **source**, or **column** level.
+- If a longer form, more styled version of text would provide a strong description, **doc blocks** can be used to render markdown in the generated documentation.
+
 ### Deployment
 A **job** executes dbt commands in deployment environments.
 
