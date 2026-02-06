@@ -1211,12 +1211,12 @@ sources:
 dbt build --target prod  # Overrides the target in profiles.yml from "dev" to "prod" for this run
 ```
 
+**Why some teams don’t use the same raw data in dev:**
+- **Cost / performance:** Raw tables can be too large, so dev uses a smaller clone or sample to reduce query cost and speed up runs.
+- **Security / access control:** Raw data may contain sensitive fields (**PII**), so dev uses masked or restricted raw datasets.
+- **Stability / reproducibility:** Raw data can change due to backfills or late-arriving records, so dev uses frozen snapshots to avoid inconsistent test results.
 
-
-
-
-
-
+Personally Identifiable Information (**PII**) is any data that can identify a specific person, either directly or indirectly; full name, phone number, email address, home address, National ID / passport number, bank account details, date of birth.
 
 
 
