@@ -1034,12 +1034,12 @@ where ingested_at > (select max(ingested_at) from {{ this }})      # Load only n
 
 The status of a product in the inventory system:
 
-| Status Code | Description  | Notes       |
-|------------|-------------|------------|
-| `AVL`      | Available   | In stock   |
-| `OOS`      | Out of Stock| None       |
-| `DIS`      | Discontinued| Stopped    |
-| `BCK`      | Backordered | Pending    |
+| Status Code | Description  | Notes    |
+|------------|---------------|----------|
+| `AVL`      | Available     | In stock |
+| `OOS`      | Out of Stock  | None     |
+| `DIS`      | Discontinued  | Stopped  |
+| `BCK`      | Backordered   | Pending  |
 
 {% enddocs %}
 ```
