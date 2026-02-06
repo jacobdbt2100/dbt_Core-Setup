@@ -1177,7 +1177,7 @@ version: 2
 sources:
   - name: xxxxx
     description: "Raw goods delivery data from the company's transactional system"
-    database: '{{target.catalog}}' # Updated hard-coded database value to adjust dynamically. Do same in other files (e.g., in snapshots)
+    database: '{{target.catalog}}' # Update hard-coded database value to adjust dynamically. Do same in other files (e.g., in snapshots)
     schema: schema_dev
     tables:
 
