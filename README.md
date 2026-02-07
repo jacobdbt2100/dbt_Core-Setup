@@ -1229,7 +1229,8 @@ Personally Identifiable Information (**PII**) is any data that can identify a sp
 
 - Alt+Shift to correct multiple lines indent at once
 
-
+- name: customers
+  freshness: null    # Exempt table from source freshness checks
 
 
 
