@@ -1268,22 +1268,11 @@ sources:
 
       - name: customers                        # No table freshness defined; uses the source-level default
         description: "Raw customers table."
+
+      - name: table_name
+        freshness: null    # Exempt table from source freshness checks
+                           # Prevents warnings/errors when running `dbt source freshness`
 ```
-
-
-
-- Add at the source level or the model level
-
-
-- Alt+Shift to correct multiple lines indent at once
-
-- name: customers
-  freshness: null    # Exempt table from source freshness checks
-
-
-
-
-
 
 
 
