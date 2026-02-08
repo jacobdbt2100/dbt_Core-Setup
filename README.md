@@ -165,9 +165,11 @@ select
     item,
     order_quantity,
     total_amt
-from {{ source('sales_data', 'orders') }} -- # Use the `source` function to select from source # this interpretes to analytics_db.raw.orders (i.e., database.schema.table)
+from {{ source('sales_data', 'orders') }} -- # This interpretes to analytics_db.raw.orders (i.e., database.schema.table)
 where total_amt > 50000
 ```
+
+The `source` function is used to build the dependency of one model to a source.
 
 **dbt model materialization priority (highest > lowest):**
 
@@ -205,6 +207,9 @@ models:
 - etc.
 
 ### 3.2 Define the source(s)
+
+- Sources represent the **raw data** that is loaded into the data warehouse.
+- Sources are configured in YML files in the models directory.
 
 `Directory` **models/source.yml:**
 
@@ -249,7 +254,9 @@ models:
       alias: transformed_customers   # Optional: physical table/view name in the DB
 ```
 
-### 3.4 Use the "ref" function to select from other models
+### 3.4 The "ref" function
+
+The `ref` function is used to build dependencies between models.
 
 ```sql
 select *
