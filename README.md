@@ -1231,8 +1231,44 @@ Personally Identifiable Information (**PII**) is any data that can identify a sp
 - A threshold can be configured for giving a **warning** and an **error** with the keys `warn_after` and `error_after`.
 - The **freshness of sources** can then be **determined** with the command `dbt source freshness`.
 
+```yml
+version: 2
 
+sources:
+  - name: raw
+    database: analytics
+    schema: raw
 
+    # Source-level defaults (applies to all tables unless overridden)
+    freshness:
+      warn_after:
+        count: 12
+        period: hour
+      error_after:
+        count: 1
+        period: day
+
+    loaded_at_field: ingestion_timestamp
+
+    tables:
+      - name: orders
+        description: "Raw orders from the transactional DB."
+        loaded_at_field: orders_loaded_at      # Table-level override for loaded_at_field
+                                               # Only define this if the orders table uses a different timestamp column
+                                               # than the source-level loaded_at_field (e.g., ingestion_timestamp)
+
+        # Table-level override (more strict than the default)
+        freshness:
+          warn_after:
+            count: 2
+            period: hour
+          error_after:
+            count: 6
+            period: hour
+
+      - name: customers                        # No table freshness defined; uses the source-level default
+        description: "Raw customers table."
+```
 
 
 
